@@ -6,7 +6,7 @@
 
 
 #list of packages
-packages <- c("tidyverse", "rgbif", "usethis", "CoordinateCleaner", "leaflet", "mapview")
+packages <- c("tidyverse", "rgbif", "usethis", "CoordinateCleaner", "leaflet", "mapview", "webshot2")
 
 #install packages not yet installed
 installed_packages <- packages %in% rownames(install.packages())
@@ -89,3 +89,13 @@ fData <- fData |>
 #   filter(countryCode %in% c("US", "CA", "MX")) |>
 #   filter(!basisOfRecord %in% c("FOSSIL_SPECIMEN", "LIVING_SPECIMEN")) |>
 #   cc_sea(lon="decimalLongitude",lat="decimalLatitude") 
+
+
+write.csv(fData, "data/cleanedData.csv")
+
+
+
+
+
+
+
